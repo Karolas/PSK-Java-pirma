@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+
+<generatorConfiguration>
+    <classPathEntry location="C:/Users/Karolis/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar" />
+
+    <context id="test" targetRuntime="">
+        <jdbcConnection driverClass="org.h2.Driver"
+                        connectionURL="jdbc:h2:~/test"
+                        userId="sa"
+                        password="">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="tst.mybatis.model" targetProject="MAVEN"/>
+        <sqlMapGenerator targetPackage="mybatis.xml.xml" targetProject="MAVEN"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="tst.mybatis.dao"  targetProject="MAVEN"/>
+
+        <table schema="PUBLIC" tableName="TESTTABLE" >
+            <generatedKey column="COLUMN_1" sqlStatement="JDBC" identity="true" />
+        </table>
+
+    </context>
+</generatorConfiguration>
