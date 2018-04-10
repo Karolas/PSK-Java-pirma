@@ -97,10 +97,18 @@ public class JpaUseCaseController implements Serializable {
     private void resetTables() {
         newTransaction = new Transaction();
 
+        loadAllCustomers();
+        for(Customer customer : allCustomers) {
+            if(selectedCustomer.equals(customer)){
+                selectedCustomer = customer;
+                break;
+            }
+        }
         newTransaction.setCustomer(selectedCustomer);
         selectedCustomerAccounts = customerDAO.getAccountsByCustomerNr(selectedCustomer.getCustomerNr());
 
         loadTransactionsByCustAndAccNr();
+
     }
 
     public void loadAccountsByCustomerNr() {
@@ -108,7 +116,7 @@ public class JpaUseCaseController implements Serializable {
         selectedAccount = null;
         resetNewTranasction();
 
-        selectedCustomerAccounts = customerDAO.getAccountsByCustomerNr(selectedCustomer.getCustomerNr());
+        selectedCustomerAccounts = selectedCustomer.getAccounts();
         newTransaction.setCustomer(selectedCustomer);
     }
 
