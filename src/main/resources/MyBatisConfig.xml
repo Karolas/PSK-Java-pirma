@@ -4,22 +4,27 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="tst.mybatis.model.Testtable" alias="Testtable"/>
-
+        <typeAlias type="psk.Mybatis.models.Accounts" alias="Accounts"/>
+        <typeAlias type="psk.Mybatis.models.Customers" alias="Customers"/>
+        <typeAlias type="psk.Mybatis.models.Transactions" alias="Transactions"/>
+        <typeAlias type="psk.Mybatis.models.CustomersAccountsKey" alias="CustomersAccounts"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <!--<property name="data_source" value="java:global/StudentsDataSource"/>-->
-                <property name="driver" value="org.h2.Driver"/>
-                <property name="url" value="jdbc:h2:~/test"/>
+            <transactionManager type="MANAGED"/>
+            <dataSource type="JNDI">
+                <!--<property name="driver" value="org.h2.Driver"/>
+                <property name="url" value="jdbc:h2:~/Databases/BankDB"/>
                 <property name="username" value="sa"/>
-                <property name="password" value=""/>
+                <property name="password" value=""/>-->
+                <property name="data_source" value="openejb:Resource/BankDataSource"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mybatis/xml/xml/TesttableMapper.xml"/>
+        <mapper resource="mybatis/xml/AccountsMapper.xml"/>
+        <mapper resource="mybatis/xml/CustomersAccountsMapper.xml"/>
+        <mapper resource="mybatis/xml/CustomersMapper.xml"/>
+        <mapper resource="mybatis/xml/TransactionsMapper.xml"/>
     </mappers>
 </configuration>

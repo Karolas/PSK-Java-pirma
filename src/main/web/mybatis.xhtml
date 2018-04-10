@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:o="http://omnifaces.org/ui"
+>
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>TestEntity List</title>
+</h:head>
+<h:body>
+    <p:button outcome="index" value="Back"/>
+    <h1>MyBatis table test field</h1>
+    <h:form id="mainForm2">
+        <p:fieldset legend="All customers" toggleable="true" style="width: 50%">
+            <p:dataTable value="#{myBatisUseCaseController.allCustomers}" var="customers"
+                         selection="#{myBatisUseCaseController.selectedCustomer}" rowKey="#{customers.customernr}"
+                         selectionMode="single">
+                <p:ajax event="rowSelect" listener="#{myBatisUseCaseController.customerSelectedAction()}"
+                        update=":mainForm2:custTable2 :mainForm2:transTable2 :transactionForm2"/>
+                <p:column headerText="Customer Nr.">
+                    <h:outputText value="#{customers.customernr}"/>
+                </p:column>
+                <p:column headerText="Name">
+                    <h:outputText value="#{customers.firstname} #{customers.lastname}"/>
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+
+        <p:fieldset legend="Customer accounts" toggleable="true" style="width: 50%">
+            <p:dataTable id="custTable2" value="#{myBatisUseCaseController.selectedCustomer.accountList}" var="account2"
+                         selection="#{myBatisUseCaseController.selectedAccount}" rowKey="#{account2.accountnr}"
+                         selectionMode="single">
+                <p:ajax event="rowSelect" listener="#{myBatisUseCaseController.accountSelectedAction()}"
+                        update=":mainForm2:transTable2 :transactionForm2"/>
+                <p:column headerText="Account Nr.">
+                    <h:outputText value="#{account2.accountnr}"/>
+                </p:column>
+                <p:column headerText="Balance">
+                    <h:outputText value="#{account2.balance}"/>
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+
+        <p:fieldset legend="Transactions" toggleable="true" style="width: 50%">
+            <p:dataTable id="transTable2" value="#{myBatisUseCaseController.selectedAccountTransactions}"
+                         var="transactions">
+                <p:column headerText="Sent date">
+                    <h:outputText value="#{transactions.reference}"/>
+                </p:column>
+                <p:column headerText="From account">
+                    <h:outputText value="#{transactions.fromAccount.accountnr}"/>
+                </p:column>
+                <p:column headerText="To account">
+                    <h:outputText value="#{transactions.toAccount.accountnr}"/>
+                </p:column>
+                <p:column headerText="Amount">
+                    <h:outputText value="#{transactions.amount}"/>
+                </p:column>
+                <p:column headerText="Ordered by">
+                    <h:outputText value="#{transactions.customer.customernr}"/>
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+    </h:form>
+
+    <h:form id="transactionForm2">
+        <p:outputLabel for="toAcc2" value="To account:"/>
+        <p:inputText id="toAcc2" value="#{myBatisUseCaseController.toAccNr}" required="true"/>
+
+        <p:outputLabel for="amount2" value="Amount:"/>
+        <p:inputText id="amount2" value="#{myBatisUseCaseController.newTransaction.amount}" required="true"/>
+
+        <p:commandButton value="Send" actionListener="#{myBatisUseCaseController.submitTransaction()}"
+                         update=":mainForm2"/>
+    </h:form>
+</h:body>
+</html>

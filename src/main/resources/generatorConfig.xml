@@ -9,18 +9,26 @@
 
     <context id="test" targetRuntime="">
         <jdbcConnection driverClass="org.h2.Driver"
-                        connectionURL="jdbc:h2:~/test"
+                        connectionURL="jdbc:h2:~/Databases/BankDB"
                         userId="sa"
                         password="">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="tst.mybatis.model" targetProject="MAVEN"/>
-        <sqlMapGenerator targetPackage="mybatis.xml.xml" targetProject="MAVEN"/>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="tst.mybatis.dao"  targetProject="MAVEN"/>
+        <javaModelGenerator targetPackage="psk.Mybatis.models" targetProject="MAVEN"/>
+        <sqlMapGenerator targetPackage="mybatis.xml" targetProject="MAVEN"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="psk.Mybatis.mappers"  targetProject="MAVEN"/>
 
-        <table schema="PUBLIC" tableName="TESTTABLE" >
-            <generatedKey column="COLUMN_1" sqlStatement="JDBC" identity="true" />
+        <table schema="PUBLIC" tableName="ACCOUNTS" >
+            <generatedKey column="ID" sqlStatement="JDBC" identity="true" />
         </table>
-
+        <table schema="PUBLIC" tableName="CUSTOMERS" >
+            <generatedKey column="ID" sqlStatement="JDBC" identity="true" />
+        </table>
+        <table schema="PUBLIC" tableName="TRANSACTIONS" >
+            <generatedKey column="ID" sqlStatement="JDBC" identity="true" />
+        </table>
+        <table schema="PUBLIC" tableName="CUSTOMERS_ACCOUNTS" >
+            <generatedKey column="ID" sqlStatement="JDBC" identity="true" />
+        </table>
     </context>
 </generatorConfiguration>

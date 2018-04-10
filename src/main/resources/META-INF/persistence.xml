@@ -2,8 +2,8 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="BankPU" transaction-type="JTA">
         <jta-data-source>BankDataSource</jta-data-source>
-        <class>Hibernate.Entities.Account</class>
-        <class>Hibernate.Entities.Customer</class>
-        <class>Hibernate.Entities.Transaction</class>
+        <class>psk.Hibernate.Entities.Account</class>
+        <class>psk.Hibernate.Entities.Customer</class>
+        <class>psk.Hibernate.Entities.Transaction</class>
     </persistence-unit>
 </persistence>

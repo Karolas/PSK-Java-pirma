@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="test" uuid="2792bbf6-e997-4ddc-8795-29ea6364119b">
-      <database-info product="H2" version="1.4.196 (2017-06-10)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.196 (2017-06-10)">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>sa</user-name>
-      <introspection-schemas>TEST:PUBLIC</introspection-schemas>
-    </data-source>
     <data-source name="BankDB" uuid="03d37470-227f-499b-99f4-f65906699bac">
       <database-info product="H2" version="1.4.196 (2017-06-10)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.196 (2017-06-10)">
         <identifier-quote-string>&quot;</identifier-quote-string>

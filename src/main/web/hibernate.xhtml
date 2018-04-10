@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:o="http://omnifaces.org/ui"
+>
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>TestEntity List</title>
+</h:head>
+<h:body>
+    <p:button outcome="index" value="Back"/>
+    <h1>JPA table test field</h1>
+    <h:form id="mainForm">
+        <p:fieldset legend="All customers" toggleable="true" style="width: 50%">
+            <p:dataTable value="#{jpaUseCaseController.allCustomers}" var="customer"
+                         selection="#{jpaUseCaseController.selectedCustomer}" rowKey="#{customer.customerNr}"
+                         selectionMode="single">
+                <p:ajax event="rowSelect" listener="#{jpaUseCaseController.loadAccountsByCustomerNr()}"
+                        update=":mainForm:custTable :mainForm:transTable"/>
+                <p:column headerText="Customer Nr.">
+                    <h:outputText value="#{customer.customerNr}"/>
+                </p:column>
+                <p:column headerText="Name">
+                    <h:outputText value="#{customer.firstName} #{customer.lastName}"/>
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+
+        <p:fieldset legend="Customer accounts" toggleable="true" style="width: 50%">
+            <p:dataTable id="custTable" value="#{jpaUseCaseController.selectedCustomerAccounts}" var="account"
+                         selection="#{jpaUseCaseController.selectedAccount}" rowKey="#{account.accountNr}"
+                         selectionMode="single">
+                <p:ajax event="rowSelect" listener="#{jpaUseCaseController.loadTransactionsByCustAndAccNr()}"
+                        update=":mainForm:transTable"/>
+                <p:column headerText="Account Nr.">
+                    <h:outputText value="#{account.accountNr}"/>
+                </p:column>
+                <p:column headerText="Balance">
+                    <h:outputText value="#{account.balance}"/>
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+
+        <p:fieldset legend="Transactions" toggleable="true" style="width: 50%">
+            <p:dataTable id="transTable" value="#{jpaUseCaseController.selectedAccountTransactions}" var="transaction">
+                <p:column headerText="Sent date">
+                    <h:outputText value="#{transaction.reference}"/>
+                </p:column>
+                <p:column headerText="From account">
+                    <h:outputText value="#{transaction.fromAccount.accountNr}"/>
+                </p:column>
+                <p:column headerText="To account">
+                    <h:outputText value="#{transaction.toAccount.accountNr}"/>
+                </p:column>
+                <p:column headerText="Amount">
+                    <h:outputText value="#{transaction.amount}"/>
+                </p:column>
+                <p:column headerText="Ordered by">
+                    <h:outputText value="#{transaction.customer.customerNr}"/>
+                </p:column>
+            </p:dataTable>
+        </p:fieldset>
+    </h:form>
+
+    <h:form id="transactionForm">
+        <p:outputLabel for="toAcc" value="To account:"/>
+        <p:inputText id="toAcc" value="#{jpaUseCaseController.toAccNr}" required="true"/>
+
+        <p:outputLabel for="amount" value="Amount:"/>
+        <p:inputText id="amount" value="#{jpaUseCaseController.newTransaction.amount}" required="true"/>
+
+        <p:commandButton value="Send" actionListener="#{jpaUseCaseController.submitTransaction()}"
+                         update=":mainForm:custTable :mainForm:transTable"/>
+    </h:form>
+</h:body>
+</html>
