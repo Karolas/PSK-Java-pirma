@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="psk.Mybatis.mappers.AccountsMapper">
+
+  <resultMap id="BaseResultMap" type="psk.Mybatis.models.Accounts">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="ACCOUNTNR" jdbcType="DECIMAL" property="accountnr" />
+    <result column="BALANCE" jdbcType="DECIMAL" property="balance" />
+  </resultMap>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    ID, ACCOUNTNR, BALANCE
+    from PUBLIC.ACCOUNTS
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectIdByAccountNr" parameterType="java.lang.Long" resultType="java.lang.Integer">
+    SELECT
+    ID
+    FROM PUBLIC.ACCOUNTS
+    WHERE ACCOUNTNR = #{accountnr,jdbcType=DECIMAL}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from PUBLIC.ACCOUNTS
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="psk.Mybatis.models.Accounts" useGeneratedKeys="true">
+    insert into PUBLIC.ACCOUNTS (ACCOUNTNR, BALANCE)
+    values (#{accountnr,jdbcType=DECIMAL}, #{balance,jdbcType=DECIMAL})
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="psk.Mybatis.models.Accounts">
+    update PUBLIC.ACCOUNTS
+    set ACCOUNTNR = #{accountnr,jdbcType=DECIMAL},
+      BALANCE = #{balance,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

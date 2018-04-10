@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="psk.Mybatis.mappers.TransactionsMapper">
+
+  <resultMap id="BaseResultMap" type="psk.Mybatis.models.Transactions">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="REFERENCE" jdbcType="TIMESTAMP" property="reference" />
+    <result column="FROMACCID" jdbcType="INTEGER" property="fromaccid" />
+    <result column="TOACCID" jdbcType="INTEGER" property="toaccid" />
+    <result column="AMOUNT" jdbcType="DECIMAL" property="amount" />
+    <result column="CUSTOMER_ID" jdbcType="INTEGER" property="customerId" />
+
+    <association property="fromAccount" column="fromaccid"
+                 resultMap="psk.Mybatis.mappers.AccountsMapper.BaseResultMap"
+                 columnPrefix="from_acc_"/>
+    <association property="toAccount" column="toaccid"
+                 resultMap="psk.Mybatis.mappers.AccountsMapper.BaseResultMap"
+                 columnPrefix="to_acc_"/>
+    <association property="customer" column="customerId"
+                 resultMap="psk.Mybatis.mappers.CustomersMapper.BaseResultMap"
+                 columnPrefix="cust_"/>
+  </resultMap>
+
+  <sql id="Base_Transaction_Select">
+    SELECT
+    t.ID,
+    t.REFERENCE,
+    t.FROMACCID,
+    t.TOACCID,
+    t.AMOUNT,
+    t.CUSTOMER_ID,
+    a1.ACCOUNTNR as from_acc_accountnr,
+    a1.BALANCE as from_acc_balance,
+    a2.ACCOUNTNR as to_acc_accountnr,
+    a2.BALANCE as to_acc_accountnr,
+    c.CUSTOMERNR as cust_customernr,
+    c.FIRSTNAME as cust_firstname,
+    c.LASTNAME as cust_lastname
+    FROM PUBLIC.TRANSACTIONS t
+    LEFT JOIN PUBLIC.ACCOUNTS a1 ON a1.ID = t.FROMACCID
+    LEFT JOIN PUBLIC.ACCOUNTS a2 ON a2.ID = t.TOACCID
+    LEFT JOIN PUBLIC.CUSTOMERS c ON c.ID = t.CUSTOMER_ID
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <include refid="Base_Transaction_Select"/>
+    WHERE t.ID = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectTransfersByCustomer" resultMap="psk.Mybatis.mappers.TransactionsMapper.BaseResultMap">
+    <include refid="Base_Transaction_Select"/>
+    WHERE t.FROMACCID = #{accId,jdbcType=INTEGER} AND
+    t.CUSTOMER_ID = #{custId,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from PUBLIC.TRANSACTIONS
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="psk.Mybatis.models.Transactions" useGeneratedKeys="true">
+    insert into PUBLIC.TRANSACTIONS (REFERENCE, FROMACCID, TOACCID, 
+      AMOUNT, CUSTOMER_ID)
+    values (#{reference,jdbcType=TIMESTAMP}, #{fromaccid,jdbcType=INTEGER}, #{toaccid,jdbcType=INTEGER}, 
+      #{amount,jdbcType=DECIMAL}, #{customerId,jdbcType=INTEGER})
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="psk.Mybatis.models.Transactions">
+    update PUBLIC.TRANSACTIONS
+    set REFERENCE = #{reference,jdbcType=TIMESTAMP},
+      FROMACCID = #{fromaccid,jdbcType=INTEGER},
+      TOACCID = #{toaccid,jdbcType=INTEGER},
+      AMOUNT = #{amount,jdbcType=DECIMAL},
+      CUSTOMER_ID = #{customerId,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

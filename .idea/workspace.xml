@@ -6,94 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db13a0ec-eeeb-4633-85a5-67cff83a4fd8" name="Default" comment="Full version">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/pirma2_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/pirma2_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_partial_bean_module_api_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_partial_bean_module_impl_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_proxy_module_api_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_proxy_module_impl_asm5_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_security_module_api_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_security_module_impl_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_johnzon_johnzon_core_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_johnzon_johnzon_mapper_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_omnifaces_omnifaces_2_6_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_6_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/DAO/CustomerDAO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/DAO/TransactionDAO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/UseCaseControllers/JpaUseCaseController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/psk/Mybatis/MyBatisResources.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/psk/Mybatis/UseCaseControllers/MyBatisUseCaseController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/beans.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/web/hibernate.xhtml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/web/mybatis.xhtml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/web/resources/css/styles.css" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/pirma2_Web_exploded.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/03d37470-227f-499b-99f4-f65906699bac.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/03d37470-227f-499b-99f4-f65906699bac.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2792bbf6-e997-4ddc-8795-29ea6364119b.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_core_deltaspike_core_api_unknown.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_core_deltaspike_core_api_1_7_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_core_deltaspike_core_impl_unknown.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_core_deltaspike_core_impl_1_7_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_data_module_api_unknown.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_data_module_api_1_7_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_data_module_impl_unknown.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_data_module_impl_1_7_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_security_module_api_unknown.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_jpa_module_api_1_7_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_security_module_impl_unknown.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_deltaspike_modules_deltaspike_jpa_module_impl_1_7_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/omnifaces_2_6_8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/META-INF/context.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/Hibernate/DAO/AccountDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/Hibernate/Entities/Account.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/Hibernate/Entities/Customer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/Hibernate/Entities/Transaction.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/Hibernate/ResourcesEMF.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/Hibernate/UseCaseControllers/AccountUCC.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/MyBatisConfig.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/generatorConfig.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/mybatis.xml/xml/TesttableMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/AntrasCDI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/PirmasCDI.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/Simple/RescueOrAsync.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/mybatis/dao/TesttableMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/mybatis/model/Testtable.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/mybatis/model/TesttableExample$Criteria.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/mybatis/model/TesttableExample$Criterion.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/mybatis/model/TesttableExample$GeneratedCriteria.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/classes/tst/mybatis/model/TesttableExample.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/faces-config.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/resources.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/pirma2_Web_exploded/index.xhtml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pirma2.iml" afterPath="$PROJECT_DIR$/pirma2.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hibernate/DAO/AccountDAO.java" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/DAO/AccountDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hibernate/Entities/Account.java" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/Entities/Account.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hibernate/Entities/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/Entities/Customer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hibernate/Entities/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/Entities/Transaction.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hibernate/ResourcesEMF.java" afterPath="$PROJECT_DIR$/src/main/java/psk/Hibernate/ResourcesEMF.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hibernate/UseCaseControllers/AccountUCC.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tst/PirmasCDI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tst/Simple/RescueOrAsync.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tst/mybatis/dao/TesttableMapper.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tst/mybatis/model/Testtable.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tst/mybatis/model/TesttableExample.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MyBatisConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/MyBatisConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis.xml/xml/TesttableMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/faces-config.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/resources.xml" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/resources.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/index.xhtml" afterPath="$PROJECT_DIR$/src/main/web/index.xhtml" />
-    </list>
+    <list default="true" id="db13a0ec-eeeb-4633-85a5-67cff83a4fd8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -353,7 +266,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-158" />
     <option name="y" value="192" />
     <option name="width" value="1936" />
@@ -465,7 +378,34 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="psk" type="462c0819:PsiDirectoryNode" />
               <item name="Mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="mappers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pirma2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pirma2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="psk" type="462c0819:PsiDirectoryNode" />
+              <item name="Mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pirma2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pirma2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="psk" type="462c0819:PsiDirectoryNode" />
+              <item name="Mybatis" type="462c0819:PsiDirectoryNode" />
               <item name="UseCaseControllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pirma2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pirma2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pirma2" type="b2602c69:ProjectViewProjectNode" />
@@ -495,6 +435,11 @@
               <item name="pirma2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pirma2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pirma2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -749,12 +694,20 @@
       <workItem from="1523180783284" duration="7103000" />
       <workItem from="1523290633333" duration="5813000" />
       <workItem from="1523300238638" duration="638000" />
-      <workItem from="1523348151516" duration="1988000" />
+      <workItem from="1523348151516" duration="2106000" />
     </task>
+    <task id="LOCAL-00001" summary="Full version">
+      <created>1523352221601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1523352221601</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141329000" />
+    <option name="totallyTimeSpent" value="141447000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,11 +719,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3269663" sideWeight="0.52139366" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921347" sideWeight="0.5091687" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.48349634" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19315404" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -783,18 +735,18 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39775282" sideWeight="0.70110023" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.4883863" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3269663" sideWeight="0.47860634" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269663" sideWeight="0.47860634" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.4908313" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29325843" sideWeight="0.6809291" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.4932763" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921347" sideWeight="0.4908313" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.4987775" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19743276" sideWeight="0.44382024" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22677262" sideWeight="0.82136893" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22677262" sideWeight="0.8207705" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22677262" sideWeight="0.17863105" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22677262" sideWeight="0.17922948" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />

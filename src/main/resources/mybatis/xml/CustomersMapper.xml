@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="psk.Mybatis.mappers.CustomersMapper">
+
+  <resultMap id="BaseResultMap" type="psk.Mybatis.models.Customers">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="CUSTOMERNR" jdbcType="DECIMAL" property="customernr" />
+    <result column="FIRSTNAME" jdbcType="VARCHAR" property="firstname" />
+    <result column="LASTNAME" jdbcType="VARCHAR" property="lastname" />
+
+    <collection property="accountList" javaType="ArrayList" ofType="Accounts"
+                column="id" select="selectAccountsForCustomer"/>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    ID, CUSTOMERNR, FIRSTNAME, LASTNAME
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from PUBLIC.CUSTOMERS
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from PUBLIC.CUSTOMERS
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="psk.Mybatis.models.Customers" useGeneratedKeys="true">
+    insert into PUBLIC.CUSTOMERS (CUSTOMERNR, FIRSTNAME, LASTNAME
+      )
+    values (#{customernr,jdbcType=DECIMAL}, #{firstname,jdbcType=VARCHAR}, #{lastname,jdbcType=VARCHAR}
+      )
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="psk.Mybatis.models.Customers">
+    update PUBLIC.CUSTOMERS
+    set CUSTOMERNR = #{customernr,jdbcType=DECIMAL},
+      FIRSTNAME = #{firstname,jdbcType=VARCHAR},
+      LASTNAME = #{lastname,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectAccountsForCustomer" parameterType="java.lang.Integer" resultType="Accounts">
+    SELECT 
+      a.ID,
+      a.ACCOUNTNR,
+      a.BALANCE
+    FROM  PUBLIC.ACCOUNTS a
+          JOIN
+          PUBLIC.CUSTOMERS_ACCOUNTS ca
+          ON 
+          a.ID = ca.ACCOUNTS_ID
+    WHERE
+          ca.CUSTOMER_ID = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectAllCustomers" resultMap="BaseResultMap">
+    SELECT
+      c.ID,
+      c.CUSTOMERNR,
+      c.FIRSTNAME,
+      c.LASTNAME
+    FROM PUBLIC.CUSTOMERS c
+  </select>
+
+</mapper>
